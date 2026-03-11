@@ -10,10 +10,10 @@ namespace SystemLab.Services
     public class ProdutoService
     {
         private readonly ProdutoRepository _repository;
-        
+
         public ProdutoService(ProdutoRepository repository)
         {
-            _repository=repository;
+            _repository = repository;
         }
 
 
@@ -26,6 +26,11 @@ namespace SystemLab.Services
         public void Create(Produto produto)
         {
             _repository.Add(produto);
+        }
+
+        public List<Produto> GetProducts()
+        {
+            throw new Exception("Erro simulado para teste");
         }
     }
 

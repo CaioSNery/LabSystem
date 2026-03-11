@@ -7,7 +7,7 @@ namespace SystemLab.DTOs
 {
     public class ProdutoDTO
     {
-        public string Nome { get; private set; }
-        public decimal Valor { get; private set; }
+        public string Nome { get; set; }
+        public decimal Valor { get; set; }
     }
 }

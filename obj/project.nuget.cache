@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fzm07YybwnU=",
+  "dgSpecHash": "PvW9HCyvHJk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\Lab\\SystemLab\\SystemLab.csproj",
+  "projectFilePath": "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\SystemLab.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
-    "C:\\Users\\USER\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+    "C:\\Users\\computador\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.25\\microsoft.aspnetcore.openapi.8.0.25.nupkg.sha512",
+    "C:\\Users\\computador\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
   ],
   "logs": []
 }

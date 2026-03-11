@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Mvc;
 using SystemLab.DTOs;
 using SystemLab.Models;
@@ -18,29 +15,29 @@ namespace SystemLab.Controllers
 
         public ProdutoController(ProdutoService service)
         {
-            _service=service;
+            _service = service;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            var produtos= _service.GetProdutos();
+            var produtos = _service.GetProducts();
             return Ok(produtos);
         }
 
-    [HttpPost]
-    public IActionResult Post(ProdutoDTO dto)
+        [HttpPost]
+        public IActionResult Post(ProdutoDTO dto)
         {
             var produto = new Produto
             {
-                Nome=dto.Nome,
-                Valor=dto.Valor
+                Nome = dto.Nome,
+                Valor = dto.Valor
             };
 
             _service.Create(produto);
-            return Created("",produto);
+            return Created("", produto);
         }
-        
-        
+
+
     }
 }
