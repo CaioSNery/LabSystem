@@ -21,7 +21,7 @@ namespace SystemLab.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var produtos = _service.GetProducts();
+            var produtos = _service.GetProdutos();
             return Ok(produtos);
         }
 

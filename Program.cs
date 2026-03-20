@@ -14,6 +14,8 @@ builder.Services.AddScoped<ProdutoService>();
 builder.Services.AddControllers();
 builder.Services.AddAuthorization();
 
+builder.Services.AddMemoryCache();
+
 var app = builder.Build();
 
 

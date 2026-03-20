@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+using Microsoft.Extensions.Caching.Memory;
 using SystemLab.Models;
 using SystemLab.Repositories;
 
@@ -11,21 +9,36 @@ namespace SystemLab.Services
     {
         private readonly ProdutoRepository _repository;
 
-        public ProdutoService(ProdutoRepository repository)
+        private readonly IMemoryCache _cache;
+
+
+        public ProdutoService(ProdutoRepository repository, IMemoryCache cache)
         {
             _repository = repository;
+            _cache = cache;
         }
 
 
         public List<Produto> GetProdutos()
         {
+
+            if (_cache.TryGetValue("produtos", out List<Produto> produtos))
+            {
+                return produtos;
+            }
             Thread.Sleep(3000);
-            return _repository.GetAll();
+            produtos = _repository.GetAll();
+
+            _cache.Set("produtos", produtos, TimeSpan.FromSeconds(30));
+
+            return produtos;
         }
 
         public void Create(Produto produto)
         {
             _repository.Add(produto);
+
+            _cache.Remove("produtos");
         }
 
         public List<Produto> GetProducts()
