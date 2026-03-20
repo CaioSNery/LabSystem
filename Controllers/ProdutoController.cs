@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using SystemLab.DTOs;
+using SystemLab.Infrastructure;
 using SystemLab.Models;
 using SystemLab.Services;
 
@@ -12,10 +13,12 @@ namespace SystemLab.Controllers
     {
 
         private readonly ProdutoService _service;
+        private readonly FilaPedidos _pedidos;
 
-        public ProdutoController(ProdutoService service)
+        public ProdutoController(ProdutoService service, FilaPedidos pedidos)
         {
             _service = service;
+            _pedidos = pedidos;
         }
 
         [HttpGet]
@@ -35,7 +38,10 @@ namespace SystemLab.Controllers
             };
 
             _service.Create(produto);
+            _pedidos.Fila.Enqueue($"Pedido criado em {DateTime.Now}");
             return Created("", produto);
+
+
         }
 
 
