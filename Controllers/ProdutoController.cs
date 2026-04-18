@@ -8,7 +8,7 @@ using SystemLab.Services;
 namespace SystemLab.Controllers
 {
     [ApiController]
-    [Route("api/produtos")]
+    [Route("api/products")]
     public class ProdutoController : ControllerBase
     {
 
@@ -42,6 +42,14 @@ namespace SystemLab.Controllers
             return Created("", produto);
 
 
+        }
+
+        [HttpGet("teste-retry")]
+        public IActionResult TesteRetry()
+        {
+            _service.SimularChamadaExternaComRetry();
+
+            return Ok("Finalizado");
         }
 
 

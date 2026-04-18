@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PvW9HCyvHJk=",
+  "dgSpecHash": "R3Zk/1vjN4U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\SystemLab.csproj",
+  "projectFilePath": "C:\\Projetos\\LabSystem\\LabSystem\\SystemLab.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\computador\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.25\\microsoft.aspnetcore.openapi.8.0.25.nupkg.sha512",
-    "C:\\Users\\computador\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
+    "C:\\Users\\computador\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\computador\\.nuget\\packages\\polly\\8.6.6\\polly.8.6.6.nupkg.sha512",
+    "C:\\Users\\computador\\.nuget\\packages\\polly.core\\8.6.6\\polly.core.8.6.6.nupkg.sha512"
   ],
   "logs": []
 }

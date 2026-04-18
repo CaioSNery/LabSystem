@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\SystemLab.csproj": {}
+    "C:\\Projetos\\LabSystem\\LabSystem\\SystemLab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\SystemLab.csproj": {
+    "C:\\Projetos\\LabSystem\\LabSystem\\SystemLab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\SystemLab.csproj",
+        "projectUniqueName": "C:\\Projetos\\LabSystem\\LabSystem\\SystemLab.csproj",
         "projectName": "SystemLab",
-        "projectPath": "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\SystemLab.csproj",
+        "projectPath": "C:\\Projetos\\LabSystem\\LabSystem\\SystemLab.csproj",
         "packagesPath": "C:\\Users\\computador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\computador\\Projeto1\\SystemLab\\LabSystem\\obj\\",
+        "outputPath": "C:\\Projetos\\LabSystem\\LabSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\computador\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,6 +20,7 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,6 +47,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.25, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.6.6, )"
             }
           },
           "imports": [

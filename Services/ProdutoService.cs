@@ -1,5 +1,6 @@
 
 using Microsoft.Extensions.Caching.Memory;
+using Polly;
 using SystemLab.Models;
 using SystemLab.Repositories;
 
@@ -45,6 +46,29 @@ namespace SystemLab.Services
         {
             throw new Exception("Erro simulado para teste");
         }
+
+
+
+        public void SimularChamadaExternaComRetry()
+        {
+            var retryPolicy = Policy
+                .Handle<Exception>()
+                .Retry(3, (exception, tentativa) =>
+                {
+                    Console.WriteLine($"Tentativa {tentativa} falhou: {exception.Message}");
+                });
+
+            retryPolicy.Execute(() =>
+            {
+                Console.WriteLine("Tentando chamar serviço externo...");
+
+                throw new Exception("Erro simulado");
+            });
+        }
+
+
+
+
     }
 
 }
